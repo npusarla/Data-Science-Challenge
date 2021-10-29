@@ -5,4 +5,4 @@
 3) ML folder -
 	1) Notebook
 	2) Powerpoint File 
-	3) Scores.csv 
+	3) Data folder -> scores.csv 
