@@ -27,7 +27,7 @@ FROM (
 		FROM OAuth_id_service u 
 		JOIN Ads_Service_interaction_Data a 
 		ON u.ads_user_id = a.ads_user_id
-		WHERE dates are in between
+		WHERE a.Timestamp Between DATEADD(dd, DATEPART(DW, GETDATE())*-1-5, GETDATE()) AND <= DATEADD(dd, DATEPART(DW, GETDATE())*-1+1, GETDATE())
 		AND SUM(a.dwell_time) > 60  
 		GROUP BY u.OAuth_id
 		) AS au
