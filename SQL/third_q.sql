@@ -12,7 +12,7 @@ SELECT overall_table.*
 FROM (
 	SELECT content_count.*, row_number() AS rn
 	over (PARTITION BY content_count.content_type
-			ORDER BY content_count.impressions DESC)
+		ORDER BY content_count.impressions DESC)
 	FROM (
 		SELECT c.*, p.impressions, p.Ads_user_id
 		FROM Content_Metadata c 
